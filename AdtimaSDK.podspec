@@ -23,6 +23,8 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target = '8.0'
   spec.ios.vendored_frameworks = 'AdtimaSDK/Frameworks/ZAD_AdtimaMobileSDK.framework'
+  spec.dependency 'ZaloSDK'
+  spec.dependency 'Google-Mobile-Ads-SDK', '~> 7.40.0'
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
