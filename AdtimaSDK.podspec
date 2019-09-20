@@ -22,30 +22,12 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/adtima/adtima-ios-sdk.git', :tag => '1.7.26.20190920_TPL41' }
 
   spec.ios.deployment_target = '8.0'
-  spec.ios.vendored_frameworks = 'AdtimaSDK/Frameworks/ZAD_AdtimaMobileSDK.framework'
+  spec.ios.vendored_frameworks = 'AdtimaSDK/Frameworks/ZAD_AdtimaMobileSDK.framework'  
+  spec.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  spec.frameworks = 'CFNetwork', 'CoreGraphics', 'QuartzCore', 'StoreKit', 'AVFoundation', 'CoreMedia', 'MessageUI', 'CoreTelephony', 'AudioToolbox', 'AdSupport', 'MobileCoreServices', 'SystemConfiguration'
+  spec.weak_frameworks = 'Foundation', 'MediaPlayer', 'UIKit', 'WebKit', 'CoreFoundation'
+  spec.libraries = 'sqlite3.0', 'z', 'c++', 'xml2'
+  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   spec.dependency 'ZaloSDK'
   spec.dependency 'Google-Mobile-Ads-SDK', '~> 7.40.0'
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-  #spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
-  # spec.requires_arc = true
-
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
-
 end
