@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/adtima/adtima-ios-sdk/wiki'
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.author       = { 'Khiem Nguyen' => 'khiemnd@vng.com.vn' }
-  spec.source       = { :git => 'https://github.com/adtima/adtima-ios-sdk.git', :tag => spec.version.to_s }
+  spec.source       = { :git => 'https://github.com/adtima/adtima-ios-sdk.git', :tag => '1.7.26.20190920_TPL41' }
 
   spec.ios.deployment_target = '8.0'
   spec.ios.vendored_frameworks = 'AdtimaSDK/Frameworks/ZAD_AdtimaMobileSDK.framework'
